@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login page</title>
+<style>
+body{
+background-image:url("beach.jpg");
+}
+.login{
+width:400px;
+		height:500px;
+		position: fixed;
+		background-image: url("blur.jpg");
+		top: 37%;
+		left: 45%;
+		margin-top: -100px;
+		margin-left: -100px;
+
+	}
+input[type=text], input[type=password] {
+    width: 70%;
+    padding: 12px 24px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.cancelbtn {
+    width: auto;
+    padding: 12px 18px;
+    background-color: #f44336;
+}
+
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+</style>
+</head>
+    <body >
+
+
+
+  <div class="login">
+<form name="login" action="/action_page.php">
+
+    <label for="userid"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="userid" required>
+</br>
+    <label for="pswrd"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pswrd" required>
+        </br>
+    <input type="button" onclick="check(this.form)" value="Login"/>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+ 
+
+  <div  style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">Forgot <a href=#>password?</a></span>
+  </div>
+</form>
+</div>
+
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.userid.value == "101695002" && form.pswrd.value == "rana") {
+                    window.open('gallary.html')/*opens the target page while Id & password matches*/
+                }
+if(form.userid.value == "101515053" && form.pswrd.value == "saif") {
+                    window.open('fest.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("Error Password or Username")/*displays error message*/
+                }
+            }
+        </script>
+
+   </body>
+</html>
